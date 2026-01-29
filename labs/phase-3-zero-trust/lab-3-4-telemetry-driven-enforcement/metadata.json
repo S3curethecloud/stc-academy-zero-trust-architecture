@@ -1,0 +1,39 @@
+{
+  "stc_type": "lab",
+  "lab_id": "P3-LAB-04",
+  "title": "Telemetry-Driven Trust Enforcement & Revocation",
+  "phase": "Phase 3 — Zero Trust Architecture",
+  "domain": "siem",
+  "subdomains": [
+    "telemetry",
+    "trust-revocation",
+    "signal-driven-enforcement"
+  ],
+  "cloud": ["aws"],
+  "difficulty": "Advanced",
+  "estimated_time": "40–60 minutes",
+  "learning_objectives": [
+    "Use telemetry signals to influence trust decisions",
+    "Explain how trust can be restricted or revoked dynamically",
+    "Prepare architectures for detection-driven response"
+  ],
+  "prerequisites": [
+    "VPC Flow Logs (Phase 2)",
+    "Context & Conditional Trust Decisions (Lab 3.3)"
+  ],
+  "security_principles": [
+    "Continuous monitoring",
+    "Adaptive trust",
+    "Signal-driven enforcement"
+  ],
+  "evidence": {
+    "labs": true,
+    "diagrams": true,
+    "deployments": false
+  },
+  "academy": {
+    "order": 4,
+    "track": "Zero Trust Architecture",
+    "status": "ready"
+  }
+}

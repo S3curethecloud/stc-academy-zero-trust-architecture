@@ -1,0 +1,39 @@
+{
+  "stc_type": "lab",
+  "lab_id": "P3-LAB-03",
+  "title": "Context & Conditional Trust Decisions",
+  "phase": "Phase 3 — Zero Trust Architecture",
+  "domain": "zero_trust",
+  "subdomains": [
+    "conditional-trust",
+    "context-aware-access",
+    "risk-based-access"
+  ],
+  "cloud": ["aws"],
+  "difficulty": "Advanced",
+  "estimated_time": "30–40 minutes",
+  "learning_objectives": [
+    "Explain trust as a conditional and revocable state",
+    "Model access decisions based on identity context and environment",
+    "Map conditional trust concepts to Zero Trust architectures"
+  ],
+  "prerequisites": [
+    "Identity-Aware Access to Compute (Lab 3.1)",
+    "Zero Trust Network Segmentation (Lab 3.2)"
+  ],
+  "security_principles": [
+    "Continuous verification",
+    "Context-aware authorization",
+    "Risk-based access control"
+  ],
+  "evidence": {
+    "labs": true,
+    "diagrams": true,
+    "deployments": false
+  },
+  "academy": {
+    "order": 3,
+    "track": "Zero Trust Architecture",
+    "status": "ready"
+  }
+}
