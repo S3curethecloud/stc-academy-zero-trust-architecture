@@ -1,0 +1,144 @@
+mgf_version: "1.0"
+
+authority:
+  mode: MGF-AUTHORITY-ALL
+  id: MGF-AUTH-PHASE-3-ZERO-TRUST
+  name: "Phase 3 — Zero Trust Architecture"
+  status: LOCKED
+  source: stc-intelligence-core
+  required: true
+  theme: "How trust is continuously enforced"
+
+repo:
+  name: stc-academy-zero-trust-architecture
+  type: platform
+  owner: SecureTheCloud
+  canonical: true
+
+sync:
+  enabled: true
+  mode: delta
+
+classification:
+  domains:
+    - zero_trust
+    - identity
+    - compute
+    - siem
+  clouds:
+    - aws
+  use_cases:
+    - student
+    - interview
+    - consulting
+
+definition:
+  problem_statement: >
+    After identity is verified and compute is securely placed, how do we
+    continuously decide whether access should persist?
+
+  canonical_definition: >
+    Phase 3 — Zero Trust Architecture defines how trust is continuously
+    evaluated and enforced after access is granted. Zero Trust is treated
+    as an architectural control system layered on top of identity
+    (Phase 1) and secure compute placement (Phase 2), using identity,
+    policy, context, network intent, and telemetry.
+
+architectural_pillars:
+  - id: identity_control_plane
+    name: "Identity as the Control Plane"
+    depends_on: "Phase 1 — Identity Foundations"
+    description: >
+      Identity replaces network location as the primary trust signal.
+      Authentication does not equal authorization. Access is session-based
+      and short-lived.
+
+  - id: no_implicit_network_trust
+    name: "No Implicit Network Trust"
+    depends_on: "Phase 2 — Secure Compute Foundations"
+    description: >
+      Network location provides zero trust. East–west traffic must be
+      explicitly approved and lateral movement is denied by default.
+
+  - id: policy_driven_access
+    name: "Policy-Driven Least Privilege"
+    description: >
+      Access is governed by intent, not convenience. Policies define who,
+      what, when, and how access occurs.
+
+  - id: conditional_trust
+    name: "Context & Conditional Trust"
+    description: >
+      Trust is dynamic and conditional. Authorization decisions change
+      based on identity state, context, and risk.
+
+  - id: telemetry_enforcement
+    name: "Telemetry-Driven Enforcement"
+    prepares_for: "Phase 4 — Detection & Response (SIEM)"
+    description: >
+      Telemetry is an active enforcement input. Trust can be reduced or
+      revoked at any time based on signals.
+
+labs:
+  canonical:
+    - id: P3-LAB-01
+      path: labs/phase-3-zero-trust/lab-3-1-identity-aware-access
+      title: "Identity-Aware Access to Compute"
+      purpose: "Remove inbound access paths using identity-native access"
+
+    - id: P3-LAB-02
+      path: labs/phase-3-zero-trust/lab-3-2-zero-trust-segmentation
+      title: "Zero Trust Network Segmentation"
+      purpose: "Eliminate implicit east–west trust"
+
+    - id: P3-LAB-03
+      path: labs/phase-3-zero-trust/lab-3-3-conditional-trust
+      title: "Context & Conditional Trust Decisions"
+      purpose: "Treat trust as dynamic and conditional"
+
+    - id: P3-LAB-04
+      path: labs/phase-3-zero-trust/lab-3-4-telemetry-driven-enforcement
+      title: "Telemetry-Driven Trust Enforcement"
+      purpose: "Turn signals into access enforcement"
+
+exclusions:
+  - vendor_specific_zero_trust_products
+  - ui_driven_walkthroughs
+  - kubernetes_or_service_mesh
+  - siem_automation
+
+knowledge_outcomes:
+  - "Explain Zero Trust as an architecture, not a product"
+  - "Design identity-aware access without inbound exposure"
+  - "Enforce least-privilege east–west communication"
+  - "Model conditional access decisions"
+  - "Explain telemetry-driven trust revocation"
+  - "Defend Zero Trust designs in interviews and consulting"
+
+phase_relationships:
+  phase_1: "Identity proves who"
+  phase_2: "Compute defines where"
+  phase_3: "Zero Trust decides whether access continues"
+  phase_4: "SIEM decides how to respond"
+
+stc_ai:
+  enabled: true
+  authority_level: phase
+  permissions:
+    - teach_zero_trust_architecture
+    - reject_network_centric_models
+    - recommend_identity_first_enforcement
+    - explain_trust_revocation
+    - bridge_zero_trust_to_siem
+
+evidence:
+  labs: true
+  diagrams: true
+  deployments: false
+
+lock:
+  statement: >
+    This file is the single source of truth for Phase 3 — Zero Trust
+    Architecture. All labs, diagrams, Academy content, AI reasoning,
+    and consulting outputs must conform to this authority.
+  change_control: authority_revision_required
