@@ -1,7 +1,12 @@
 # Phase 3 — Zero Trust Architecture (Interview Whiteboard)
 
-This folder contains **interview-ready, architecture-level diagrams** for
-Phase 3 — Zero Trust Architecture in the SecureTheCloud Academy.
+## Canonical Interview Diagram
+
+This is the **single authoritative interview whiteboard diagram** for Phase 3 — Zero Trust Architecture.
+
+All interview explanations, whiteboard walkthroughs, and senior-level discussions
+should reference this diagram.
+
 
 These diagrams are intentionally:
 
