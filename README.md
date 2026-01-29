@@ -95,4 +95,4 @@ stc-academy-zero-trust-architecture/
     └── phase-3-zero-trust/
         ├── README.md
         └── placeholders.md
-```
+        ```
