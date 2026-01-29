@@ -63,7 +63,7 @@ labs/phase-3-zero-trust/
   lab-3-4-telemetry-driven-enforcement/
 ---
 stc-academy-zero-trust-architecture/
-```
+```plaintree
 ├── README.md
 ├── .mgf/
 │   ├── mgf.yaml
